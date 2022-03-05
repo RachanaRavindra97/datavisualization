@@ -1,3 +1,5 @@
+With forever developing technology and advances in the fields of genomics and proteomics, we have abundant data to play with. Right now what matters the most is how effectively we analyze this data and what we do with the information we obtain. I believe that this will be a game-changer in the field of personalized medicine. Especially with diseases like cancer, which not only affects the life of the patient but also their loved ones and the people around them.
+
 Cancer is a disease that affects a large population. The cause to this disease remains unknown. 
 It is thought that there are several factors that influence the cause.
-In this dashboard, I am representing a data set which contains information about a group of individuals enrolled to an experiment. It has information about the individual's lifestyle, other health factors and about if they have cancer or not. In case of individual's with cancer, it also taks about the type of cancer present.
+In this dashboard, I am representing a data set which contains information about a group of individuals enrolled to an experiment. It has information about the individual's lifestyle, other health factors and about if they have cancer or not. In case of individual's with cancer, it also talks about the type of cancer present.
