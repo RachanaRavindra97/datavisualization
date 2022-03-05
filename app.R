@@ -15,32 +15,32 @@ ui <- dashboardPage(
 
 
 server <- function(input, output) {
-    about <- readLines(("/Users/rachana/workplace/ShinyTeeter/DataVisualization/about.txt" ))
+    about <- readLines(("about.txt" ))
     #read the about txt file, and print the lines on to the dashboard.
     output$text1 <- renderText({
       paste(about)
     })
     
-    dat_1 <- read.csv("/Users/rachana/workplace/ShinyTeeter/DataVisualization/Mock_data_1.csv", header = TRUE, sep = ",")
+    dat_1 <- read.csv("Mock_data_1.csv", header = TRUE, sep = ",")
     # Render imported data (CSV file) as table
     output$table1 <- DT::renderDataTable({
         dat_1
     })
-    dat_2 <- read.csv("/Users/rachana/workplace/ShinyTeeter/DataVisualization/Mock_data_2.csv", header = TRUE, sep = ",")
+    dat_2 <- read.csv("Mock_data_2.csv", header = TRUE, sep = ",")
     # Render imported data (CSV file) as table
     output$table2 <- DT::renderDataTable({
         
         dat_2
     })
     
-    dat_3 <- read.csv("/Users/rachana/workplace/ShinyTeeter/DataVisualization/Mock_data_3.csv", header = TRUE, sep = ",")
+    dat_3 <- read.csv("Mock_data_3.csv", header = TRUE, sep = ",")
     # Render imported data (CSV file) as table
     output$table3 <- DT::renderDataTable({
         
         dat_3 
     })
     
-    dat_plot <- read.csv("/Users/rachana/workplace/ShinyTeeter/DataVisualization/mock_data_plot.csv", header = TRUE, sep = ",")
+    dat_plot <- read.csv("mock_data_plot.csv", header = TRUE, sep = ",")
     output$plot1 <- renderPlot({
         #plots the dataset data_plot with x axis as cancer_type and y as weight.
         #geom_point determines the aesthetics of the points on the graph.
