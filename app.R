@@ -7,7 +7,7 @@ ui <- dashboardPage(
     dashboardSidebar(disable = TRUE),# the sidebar was disabled, as it was not needed.
     dashboardBody(
         #makes 4 tabs, 3 for table and one for chart which has the ploted graph.
-        tabsetPanel(id = "tabset", type = 'pills', tabPanel(title = "Charts", tabPanel(title = "Charts", plotOutput("plot1", click = "plot_click"), verbatimTextOutput("info"))), tabPanel(title = "Table", DT::dataTableOutput('table1')), tabPanel(title = "Table", DT::dataTableOutput('table2')), tabPanel(title = "Table", DT::dataTableOutput('table3')), tabPanel(title = "About", textOutput('text1'))),
+        tabsetPanel(id = "tabset", type = 'pills', tabPanel(title = "About", textOutput('text1')), tabPanel(title = "Charts", tabPanel(title = "Charts", plotOutput("plot1", click = "plot_click"), verbatimTextOutput("info"))), tabPanel(title = "Table", DT::dataTableOutput('table1')), tabPanel(title = "Table", DT::dataTableOutput('table2')), tabPanel(title = "Table", DT::dataTableOutput('table3'))),
         #verbatimTextOutput("info"). gives information, from the data set, when a pointed is clicked on the graph.
         
                 ),
@@ -15,6 +15,7 @@ ui <- dashboardPage(
 
 
 server <- function(input, output) {
+    setwd("~/workplace/ShinyTeeter/DataVisualization/datavisualization")
     about <- readLines(("about.txt" ))
     #read the about txt file, and print the lines on to the dashboard.
     output$text1 <- renderText({
